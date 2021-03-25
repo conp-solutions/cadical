@@ -260,13 +260,13 @@ bool Internal::propagate () {
 
           assert (lits + 2 <= k), assert (k <= w.clause->end ());
 
-          if (v > 0) {
+          /* if (v > 0) {
 
             // Replacement satisfied, so just replace 'blit'.
 
             j[-1].blit = r;
 
-          } else if (!v) {
+          } else */ if (v>=0) {
 
             // Found new unassigned replacement literal to be watched.
 
